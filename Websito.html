@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleno.css">
+    <title>Cariñito. 💕</title>
+</head>
+<body>
+    <div class="container">
+        <img src="Gianel/gif/descarga (3).gif" data-share-method="host" data-aspect-ratio="1.0641" data-width="100%"><a ></a>
+        <h1>¿Te gustaria pasar mucho más tiempo conmigo? 🥰</h1>
+        <p></p>
+        <div class="btn">
+            <a href="Aceptado.html">SI</a>
+            <a href="Rechazado.html">NO</a>
+        </div>
+    <body>
+        <style>
+            /* Mensaje animado */
+        .message {
+            font-size: 22px;
+            color: rgb(194, 76, 76);
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            margin-top: 20px;
+        }
+        </style>
+    </body>
+    <h1 style="color: rgb(0, 0, 0);"> Un detalle especial para tí, mi único amor, Gianella. 💕💕💕</h1>
+
+    <!-- Botón para abrir la flor -->
+    <button class="open-flower-btn" id="openButton" onclick="bloomFlower()" style="font-size: 24px; background-color: white; color: black; padding: 15px 30px; border: 2px solid rgb(255, 255, 255); border-radius: 10px; cursor: pointer;">✨ Haz clic aquí ✨</button>
+
+    <!-- Contenedor de la flor -->
+    <div class="flower-container" id="flower">
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="petal"></div>
+        <div class="center"></div>
+    </div>
+
+    <!-- Mensaje sorpresa -->
+    <p class="message" id="message"></p>
+
+    <script>
+        function bloomFlower() {
+            document.getElementById("openButton").style.display = "none";
+            let flower = document.getElementById("flower");
+            let petals = document.querySelectorAll(".petal");
+            let center = document.querySelector(".center");
+            let message = document.getElementById("message");
+
+            flower.style.transform = "scale(1)";
+
+            // Mostrar pétalos con retraso
+            petals.forEach((petal, index) => {
+                setTimeout(() => {
+                    petal.style.opacity = "1";
+                }, index * 500);
+            });
+
+            // Mostrar centro y mensaje después de los pétalos
+            setTimeout(() => {
+                center.style.opacity = "1";
+                message.style.opacity = "1";
+                typeMessage();
+            }, 2500);
+        }
+
+        function typeMessage() {
+            let messageText = "Para la unica persona que pienso 24/7 cada dia, eres realmente lo mas bonito que me pudo haber pasado, conociendote de una mandera tan única y sigamos aqui despues de tantos problemas... Estoy muy enamorado de ti. Haz logrado hacer que todo lo que tengo por demostrar por alguien vuelva nuevamente y quiero que tu recibas todo ese gran afecto de mi parte. 💌";
+            let messageElement = document.getElementById("message");
+            let index = 0;
+            messageElement.textContent = "";
+
+            function type() {
+                if (index < messageText.length) {
+                    messageElement.textContent += messageText[index];
+                    index++;
+                    setTimeout(type, 100);
+                }
+            }
+            type();
+        }
+    </script>
+</script>
+</body>
+</html>
