@@ -1,0 +1,23 @@
+body{
+    overflow-x: hidden;
+  }
+  .AMOR h1{
+    font-size: 50px;
+    font-family: Arial rgb(0, 0, 0);
+    color: rgb(248, 215, 215);
+    text-shadow: 10px 10px rgba(255, 216, 216, 0.24);
+    text-transform: capitalize;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #f8c2e2;
+    transition: color 2s, text-shadow 2s;
+    position: relative;
+    left: -810px; /* Adjust this value to move it further to the left */
+    top: -350px; /* Adjust this value to move it further down */
+  }
+  
+  .AMOR h1:hover{
+    text-shadow: 2px 2px pink;
+    color: rgb(255, 215, 215);
+     -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: rgb(255, 184, 220);
+  }

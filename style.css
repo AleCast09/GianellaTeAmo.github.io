@@ -1,0 +1,141 @@
+
+/** aqui otro**/
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fcc6f7;
+}
+ 
+/** AQUI EMPIEZA OTRO CODE  **/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    background-color: #fcc6f7;
+    font-family: "Protest Riot", sans-serif;
+  }
+  
+  .container {
+    height: 100vh;
+    margin: 0 auto;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cat-img {
+    width: 30rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+  }
+  
+  .title {
+    font-size: 3.6rem;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 1.5rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+  
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .btn--yes {
+    background-color: #ebb0cb;
+    box-shadow: 0 0 10px #ffffff;
+    transition: .5s ease;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+  }
+  
+  .btn--no {
+    background-color: #242022;
+    box-shadow: 0 0 10px #ffffff;
+    transition: .5s ease;
+    outline: none;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    height: 100vh;
+    overflow: hidden;
+    background: #333333;
+}
+
+section span {
+    position: absolute;
+    pointer-events: none;
+    background-size: cover;
+    animation: animacion 10s linear forwards;
+}
+
+@keyframes animacion {
+    0% {
+        transform: translateY(-950px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1000%);
+        opacity: 0;
+    }
+}
+
+.cascada {
+  position: absolute;
+  top: 0;
+  animation: caer 1s linear forwards;
+  cursor: pointer; /* Cambiar el cursor para indicar que es clicable */
+}
+
+@keyframes caer {
+  to {
+    transform: translateY(100vh);
+  }
+}

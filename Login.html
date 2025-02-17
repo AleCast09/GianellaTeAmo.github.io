@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gianella. 💌 </title>
+    <audio autoplay>
+        <source src="img/Química Mayor.mp3" type="audio/mpeg">
+    </audio>
+    <button id="playMusicButton" style="position: absolute; top: 900px; right: 890px;">Reproducir Música</button>
+    <script>
+        document.getElementById('playMusicButton').addEventListener('click', function() {
+            const audio = document.querySelector('audio');
+            audio.play();
+        });
+    </script>
+<style>
+    body {
+        background: linear-gradient(to right, #ffd0d7, #eee8e8), url('img/meGusta.png'); /* Gradiente de fondo y ruta de la imagen de fondo */
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+.container {
+    text-align: center;
+    background-color: rgb(238, 212, 222);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ancho fijo para el contenedor */
+}
+
+#capibara {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    height: 100px; /* Mantiene la proporción */
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Asegura que la imagen cubra el área */
+    margin-bottom: 1rem;
+    border: 5px solid #f3f3f3; /* Borde dorado */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #ff7e5f; /* Color de borde al enfocar */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+button {
+    padding: 0.7rem;
+    background-color: #df8b8b; /* Color de fondo del botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f5bebe; /* Color de fondo al pasar el mouse */
+}
+
+#message {
+    margin-top: 1rem;
+    color: red;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Inicie Señorita Wafflera</h1>
+        <img id="capibara" src="img/waffles.jpeg" />
+        <form id="loginForm">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <p id="message"></p>
+        <audio id="capibaraSong" src=""></audio/mpeg>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            const backgroundAudio = document.getElementById('backgroundAudio');
+            backgroundAudio.play().catch(error => {
+                console.log('Autoplay was prevented:', error);
+            });
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const message = document.getElementById('message');
+    const song = document.getElementById('capibaraSong');
+
+    // Validación simple (puedes personalizar esto)
+    if (username === "Nyx" && password === "Waffles123") {
+        message.style.color = "green";
+        message.textContent = "¡Inicio de sesión exitoso!";
+        song.play(); // Reproduce la canción al iniciar sesión correctamente
+    window.location.href = 'Wuuu!!.html';
+   
+    } else {
+        message.style.color = "red";
+        message.textContent = "Datos incorrectos mi vida :(";
+    }
+});
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+    overflow-x: hidden;
+  }
+  .REPRO h1{
+    font-size: 50px;
+    font-family: Arial rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 10px 10px rgba(216, 255, 243, 0.24);
+    text-transform: capitalize;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #c2e2f8;
+    transition: color 2s, text-shadow 2s;
+    position: relative;
+    left: -520px; /* Adjust this value to move it further to the left */
+    top: -250px; /* Adjust this value to move it further down */
+  }
+  
+  .REPRO h1:hover{
+    text-shadow: 2px 2px rgba(149, 213, 255, 0.897);
+    color: rgb(255, 255, 255);
+     -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: rgba(210, 225, 255, 0.308);
+  }
